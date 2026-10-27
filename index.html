@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión | Retail Corp</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/login.js" defer></script>
+</head>
+<body>
+  <main class="login">
+    <section class="presentacion" aria-labelledby="titulo-empresa">
+      <div class="marca">
+        <img src="img/logo.png" alt="Logo de Retail Corp">
+        <span>Retail Corp</span>
+      </div>
+
+      <div class="presentacion-contenido">
+        <p class="etiqueta">CONTROL DE INVENTARIO</p>
+
+        <h1 id="titulo-empresa">
+          Cada equipo.<br>
+          <span>En su lugar.</span>
+        </h1>
+
+        <p class="descripcion">
+          Administra los equipos de la empresa y mantén
+          su información organizada en un solo lugar.
+        </p>
+      </div>
+
+      <p class="pie-marca">Retail Corp S.A. de C.V.</p>
+    </section>
+
+    <section class="acceso" aria-labelledby="titulo-login">
+      <div class="formulario-contenedor">
+        <p class="etiqueta etiqueta-oscura">PORTAL INTERNO</p>
+        <h2 id="titulo-login">Iniciar sesión</h2>
+        <p class="subtitulo">
+          Ingresa con tu cuenta para acceder al inventario.
+        </p>
+
+        <form action="php/login.php" method="POST">
+          <p id="mensaje-error" role="alert" hidden></p>
+          <div class="campo">
+            <label for="correo">Correo electrónico</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              placeholder="nombre@empresa.com"
+              autocomplete="username"
+              maxlength="254"
+              required
+            >
+          </div>
+
+          <div class="campo">
+            <label for="password">Contraseña</label>
+
+            <div class="password-contenedor">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Ingresa tu contraseña"
+                autocomplete="current-password"
+                required
+              >
+
+              <button
+                type="button"
+                id="mostrar-password"
+                class="mostrar-password"
+                aria-controls="password"
+                aria-pressed="false"
+              >
+                Mostrar
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="boton-acceso">
+            Iniciar sesión
+          </button>
+        </form>
+
+        <p class="ayuda">
+          ¿Necesitas una cuenta? Solicítala al administrador.
+        </p>
+      </div>
+
+      <p class="pie-acceso">Sistema de registro y control de equipos</p>
+    </section>
+  </main>
+</body>
+</html>
